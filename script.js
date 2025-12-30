@@ -1,10 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- Scroll Reveal Logic ---
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
     // --- Pricing Calculator ---
     const userSlider = document.getElementById('user-slider');
     const userCountDisplay = document.getElementById('user-count');
     const totalPriceDisplay = document.getElementById('total-price');
-    const perYearLabel = document.getElementById('per-year');
     const pricingCta = document.getElementById('pricing-cta');
 
     const updatePricing = (val) => {
@@ -12,144 +22,90 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (users > 100) {
             userCountDisplay.textContent = "100+";
-            totalPriceDisplay.textContent = "Contact us";
-            perYearLabel.textContent = "";
+            totalPriceDisplay.textContent = "Contact Us";
             pricingCta.textContent = "Contact sales";
-            pricingCta.disabled = true;
-            pricingCta.style.opacity = "0.5";
         } else {
             userCountDisplay.textContent = users;
             totalPriceDisplay.textContent = `£${users * 12}`;
-            perYearLabel.textContent = "/ year";
             pricingCta.textContent = "Request account";
-            pricingCta.disabled = false;
-            pricingCta.style.opacity = "1";
         }
     };
 
     userSlider.addEventListener('input', (e) => updatePricing(e.target.value));
 
     // --- FAQ Accordion ---
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const isExpanded = question.getAttribute('aria-expanded') === 'true';
-            const answer = document.getElementById(question.getAttribute('aria-controls'));
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const answer = document.getElementById(button.getAttribute('aria-controls'));
             
-            // Close others
-            faqQuestions.forEach(q => {
-                if (q !== question) {
-                    q.setAttribute('aria-expanded', 'false');
-                    document.getElementById(q.getAttribute('aria-controls')).hidden = true;
+            // Close others for focus
+            document.querySelectorAll('.faq-question').forEach(other => {
+                if (other !== button) {
+                    other.setAttribute('aria-expanded', 'false');
+                    document.getElementById(other.getAttribute('aria-controls')).hidden = true;
                 }
             });
 
-            // Toggle current
-            question.setAttribute('aria-expanded', !isExpanded);
+            button.setAttribute('aria-expanded', !isExpanded);
             answer.hidden = isExpanded;
         });
     });
 
     // --- Modal Logic ---
     const modal = document.getElementById('modal');
-    const ctaTriggers = document.querySelectorAll('.cta-trigger');
-    const modalClose = document.querySelector('.modal-close');
-    const modalOverlay = document.querySelector('.modal-overlay');
-
     const openModal = () => {
         modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden'; // Prevent scroll
+        document.body.style.overflow = 'hidden';
         document.getElementById('name').focus();
     };
-
     const closeModal = () => {
         modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
     };
 
-    ctaTriggers.forEach(trigger => trigger.addEventListener('click', openModal));
-    modalClose.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
-
-    // Escape key to close modal
+    document.querySelectorAll('.cta-trigger').forEach(btn => btn.addEventListener('click', openModal));
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    document.querySelector('.modal-overlay').addEventListener('click', closeModal);
+    
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
 
-    // --- Form Validation & Submission ---
+    // --- Form Handling ---
     const form = document.getElementById('request-form');
     const successState = document.getElementById('success-state');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            company: document.getElementById('company').value.trim(),
-            users: document.getElementById('users').value
+        const payload = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('company').value,
+            users: document.getElementById('users').value,
+            timestamp: new Date().toISOString()
         };
 
-        // Simple validation check
-        let hasError = false;
-        if (formData.name.length < 2) {
-            showError('name', 'Please enter your full name');
-            hasError = true;
-        }
-        if (!formData.email.includes('@')) {
-            showError('email', 'Please enter a valid work email');
-            hasError = true;
-        }
+        console.log('SaaS Lead Captured:', payload);
 
-        if (hasError) return;
+        // Visual Feedback
+        const btn = form.querySelector('button');
+        btn.disabled = true;
+        btn.textContent = "Sending...";
 
-        // Log payload as requested
-        console.log('Form Payload:', formData);
-
-        // Show success state
-        form.classList.add('hidden');
-        successState.classList.remove('hidden');
-        
-        // Auto-close modal after delay
         setTimeout(() => {
-            closeModal();
-            // Reset form for future use
+            form.classList.add('hidden');
+            successState.classList.remove('hidden');
+            
             setTimeout(() => {
+                closeModal();
                 form.reset();
                 form.classList.remove('hidden');
                 successState.classList.add('hidden');
-            }, 500);
-        }, 3000);
-    });
-
-    const showError = (fieldId, msg) => {
-        const field = document.getElementById(fieldId);
-        const errorSpan = field.nextElementSibling;
-        errorSpan.textContent = msg;
-        field.style.borderColor = '#dc2626';
-        
-        setTimeout(() => {
-            errorSpan.textContent = '';
-            field.style.borderColor = '';
-        }, 3000);
-    };
-
-    // --- Smooth Scroll for nav links ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+                btn.disabled = false;
+                btn.textContent = "Request account";
+            }, 4000);
+        }, 8000); // Mimic server work
     });
 });
