@@ -1,390 +1,387 @@
-/* Base Styles & System Fonts */
-:root {
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --bg-light: #f8fafc;
-    --border: #e2e8f0;
-    --white: #ffffff;
-    --container-width: 1100px;
-}
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday | Stop managing leave in spreadsheets</title>
+    <meta name="description" content="The simple, secure, and affordable holiday request tool for modern teams. Just £12 per person per year.">
+    
+    <meta property="og:title" content="Holiday | Leave Management Simplified">
+    <meta property="og:description" content="Stop managing leave in spreadsheets. Secure, simple, and £12/year.">
+    <meta property="og:type" content="website">
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; color: var(--primary);"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Holiday
+            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#features">Features</a>
+                <a href="#security">Security</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <button class="btn btn-primary cta-trigger">Request account</button>
+        </div>
+    </header>
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    color: var(--text-main);
-    line-height: 1.6;
-    background: var(--white);
-    -webkit-font-smoothing: antialiased;
-}
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="badge">Trusted by UK Teams</span>
+                    <h1>Stop managing leave in spreadsheets</h1>
+                    <p class="subheadline">The only leave management tool that feels like a breath of fresh air. No training, no complexity—just a calm, clear dashboard for £12 per year.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg cta-trigger">Request account</button>
+                        <a href="#pricing" class="btn btn-secondary btn-lg">See pricing</a>
+                    </div>
+                    <p class="hero-trust-note">No credit card required. Setup takes 2 minutes.</p>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="mock-ui-container">
+                        <svg viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="mock-ui">
+                            <rect width="500" height="350" rx="16" fill="#fff"/>
+                            <rect x="0" y="0" width="140" height="350" fill="#F8FAFC"/>
+                            <rect x="20" y="30" width="100" height="12" rx="6" fill="#E2E8F0"/>
+                            <rect x="20" y="60" width="80" height="10" rx="5" fill="#CBD5E1" fill-opacity="0.5"/>
+                            <rect x="20" y="100" width="100" height="30" rx="6" fill="#EEF2FF"/>
+                            <rect x="30" y="110" width="60" height="10" rx="5" fill="#6366F1"/>
+                            
+                            <rect x="160" y="30" width="320" height="80" rx="12" fill="#fff" stroke="#F1F5F9" stroke-width="2"/>
+                            <circle cx="190" cy="70" r="15" fill="#E0E7FF"/>
+                            <rect x="215" y="60" width="120" height="8" rx="4" fill="#6366F1"/>
+                            <rect x="215" y="75" width="80" height="6" rx="3" fill="#94A3B8"/>
 
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
+                            <rect x="160" y="130" width="320" height="200" rx="12" fill="#fff" stroke="#F1F5F9" stroke-width="2"/>
+                            <rect x="180" y="155" width="280" height="40" rx="8" fill="#F8FAFC"/>
+                            <rect x="180" y="205" width="280" height="40" rx="8" fill="#F8FAFC"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-h1, h2, h3, h4 {
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
+        <section class="trust-bar">
+            <div class="container trust-grid">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Bank-grade security</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>99.9% Platform Uptime</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Fixed UK Annual Pricing</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Outlook & Google Sync</span>
+                </div>
+            </div>
+        </section>
 
-p { margin-bottom: 1rem; }
+        <section class="problem-solution container">
+            <div class="ps-box reveal">
+                <div class="ps-label error">The Old Way</div>
+                <h3>The Spreadsheet Struggle</h3>
+                <p>Manual tracking leads to calculation errors, missed emails, and "who is off today?" confusion. It's a hidden drain on your mental bandwidth.</p>
+                <div class="spreadsheet-mock">
+                    <div class="row"><span>Jan 12</span><span>#REF!</span><span>Pending?</span></div>
+                    <div class="row"><span>Jan 13</span><span>Dave</span><span>Lost email</span></div>
+                </div>
+            </div>
+            <div class="ps-box reveal">
+                <div class="ps-label success">The Holiday Way</div>
+                <h3>The Full Picture</h3>
+                <p>One link for your team to request leave, and one dashboard for you to approve it. Simple, fast, and always accurate. No training required.</p>
+                <div class="holiday-mock">
+                    <div class="row-success">✓ Dave Approved</div>
+                    <div class="row-success">✓ Sarah Approved</div>
+                </div>
+            </div>
+        </section>
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s, transform 0.1s;
-    font-size: 1rem;
-}
+        <section id="features" class="features container">
+            <div class="section-header">
+                <h2 class="section-title">Everything you need, nothing you don't</h2>
+                <p>Designed to be powerful enough for managers, yet simple enough for everyone.</p>
+            </div>
+            <div class="features-grid">
+                <div class="card reveal">
+                    <div class="card-icon">☀️</div>
+                    <h4>Total Flexibility</h4>
+                    <p>Support for full days, half days, and specific morning/afternoon blocks to suit modern work.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">👥</div>
+                    <h4>Team Approvals</h4>
+                    <p>Assign multiple managers to a group. Anyone can approve, ensuring requests never stall.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">🔄</div>
+                    <h4>Smart Cancellations</h4>
+                    <p>Staff can request to cancel leave. One click for you to approve and restore their balance.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">📈</div>
+                    <h4>Live Balances</h4>
+                    <p>Employees see their remaining allowance update in real-time before they even submit.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">🖥️</div>
+                    <h4>Central Dashboard</h4>
+                    <p>A bird's-eye view of your entire company with powerful filters to see who's away when.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">📅</div>
+                    <h4>Calendar Sync</h4>
+                    <p>Automatically push approved leave to Outlook or Google Calendar via a secure, private feed.</p>
+                </div>
+            </div>
+        </section>
 
-.btn-primary {
-    background: var(--primary);
-    color: var(--white);
-}
+        <section id="security" class="security">
+            <div class="container">
+                <div class="security-flex">
+                    <div class="security-text reveal">
+                        <span class="badge badge-outline">Security & Privacy</span>
+                        <h2>Your data is safe with us</h2>
+                        <p>We built Holiday with a "security-first" mindset. Your data is isolated, encrypted, and hosted on world-class infrastructure designed for the highest compliance standards.</p>
+                    </div>
+                    <div class="security-list card reveal">
+                        <h3>Security Facts</h3>
+                        <ul>
+                            <li><strong>Row-Level Security:</strong> Your data is strictly isolated from every other company.</li>
+                            <li><strong>Permanent Audit Trail:</strong> Every request, approval, and change is logged forever.</li>
+                            <li><strong>Invite-Only Access:</strong> You maintain total control over who enters your workspace.</li>
+                            <li><strong>GDPR Ready:</strong> UK-based hosting with strict data protection and privacy controls.</li>
+                            <li><strong>Encrypted Transport:</strong> All data is sent over secure, industry-standard SSL/TLS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.btn-primary:hover { background: var(--primary-hover); }
+        <section class="how-it-works container">
+            <h2 class="section-title">Launch in three steps</h2>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-num">1</div>
+                    <h4>Secure Setup</h4>
+                    <p>Request an account and we'll provision your private, secure Holiday environment instantly.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num">2</div>
+                    <h4>Import Staff</h4>
+                    <p>Upload your team list or invite via email. Set annual allowances and your workspace is ready.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num">3</div>
+                    <h4>Enjoy the Calm</h4>
+                    <p>Your team starts booking. You start approving. No more messy email threads or broken cells.</p>
+                </div>
+            </div>
+        </section>
 
-.btn-secondary {
-    background: var(--bg-light);
-    color: var(--text-main);
-    border: 1px solid var(--border);
-}
+        <section id="pricing" class="pricing container">
+            <div class="pricing-card reveal">
+                <span class="badge">Simple Pricing</span>
+                <h2>One price, everything included</h2>
+                <div class="price-hero">
+                    <span class="currency">£</span><span class="amount">12</span>
+                    <span class="period">per person / year</span>
+                </div>
+                <div class="calculator">
+                    <div class="calc-header">
+                        <span>Number of users</span>
+                        <span class="user-pill"><span id="user-count">10</span> users</span>
+                    </div>
+                    <input type="range" id="user-slider" min="1" max="101" value="10" aria-label="Adjust number of users">
+                    <div class="total-display">
+                        <span class="total-label">Annual Investment</span>
+                        <div class="total-value">
+                            <strong id="total-price">£120</strong>
+                            <span class="total-vat">incl. VAT</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg w-full cta-trigger" id="pricing-cta">Request account</button>
+                <p class="pricing-note">Up to 100 users. For larger teams, please contact us.</p>
+            </div>
+        </section>
 
-.btn-secondary:hover { background: var(--border); }
+        <section class="proof container">
+            <h2 class="section-title">What teams notice in week one</h2>
+            <div class="proof-grid">
+                <div class="proof-item reveal">
+                    <span class="proof-check">✓</span>
+                    <p>Zero "how many days do I have left?" questions.</p>
+                </div>
+                <div class="proof-item reveal">
+                    <span class="proof-check">✓</span>
+                    <p>Managers save hours every Monday morning.</p>
+                </div>
+                <div class="proof-item reveal">
+                    <span class="proof-check">✓</span>
+                    <p>Payroll is done in minutes, not hours.</p>
+                </div>
+                <div class="proof-item reveal">
+                    <span class="proof-check">✓</span>
+                    <p>The "Friday Feeling" of a clean, synced calendar.</p>
+                </div>
+            </div>
+        </section>
 
-.w-full { width: 100%; }
+        <section id="faq" class="faq container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                        How does it handle Bank Holidays?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-1" class="faq-answer" hidden>
+                        <p>Holiday automatically accounts for UK Bank Holidays. You can toggle which ones apply to your team during the 2-minute setup process.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                        Can managers request their own leave?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-2" class="faq-answer" hidden>
+                        <p>Yes. Managers follow the same process, and their requests are routed to a workspace admin or another designated manager for approval.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                        Is there a manual for self-approval?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-3" class="faq-answer" hidden>
+                        <p>While admins can make balance adjustments, Holiday is built on a "four-eyes" principle to ensure transparency and prevent errors.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                        How do cancellations work?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-4" class="faq-answer" hidden>
+                        <p>Users simply select an approved holiday and click "Request Cancellation." Once you approve it, their balance is restored automatically.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                        Can I export data for payroll?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-5" class="faq-answer" hidden>
+                        <p>Yes. Admins can export any date range to a clean CSV file, making payroll or monthly reporting a 10-second task.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                        How often does the calendar feed sync?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-6" class="faq-answer" hidden>
+                        <p>The feed is live. External apps like Outlook or Google Calendar typically refresh the data every 1-3 hours automatically.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+                        Where is my data stored?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-7" class="faq-answer" hidden>
+                        <p>Your data is stored in UK-based data centres with multi-layered encryption, ensuring compliance with the highest privacy standards.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+                        How do I install Holiday?
+                        <span class="icon"></span>
+                    </button>
+                    <div id="faq-8" class="faq-answer" hidden>
+                        <p>There is nothing to install. Holiday is a secure web application that works perfectly in any browser on desktop, tablet, or mobile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Header */
-.site-header {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    z-index: 100;
-    padding: 1rem 0;
-}
+        <section class="final-cta">
+            <div class="container reveal">
+                <h2>Ready to leave the spreadsheets behind?</h2>
+                <p>Join teams across the UK who have found a better way to manage time off.</p>
+                <button class="btn btn-primary btn-xl cta-trigger">Request account</button>
+            </div>
+        </section>
+    </main>
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">Holiday</div>
+                <nav class="footer-nav">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#security">Security Facts</a>
+                    <a href="mailto:support@holiday.example">Contact Support</a>
+                </nav>
+            </div>
+            <p class="copyright">© 2025 Holiday. Built for simplicity. UK Registered.</p>
+        </div>
+    </footer>
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-    text-decoration: none;
-}
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Request account</h2>
+            <p>We'll handle the migration from your spreadsheet for you.</p>
+            
+            <form id="request-form">
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="Alex Smith" required>
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Work email</label>
+                    <input type="email" id="email" placeholder="alex@company.com" required>
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company name</label>
+                    <input type="text" id="company" placeholder="Acme Ltd" required>
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label for="users">Approx. number of users</label>
+                    <input type="number" id="users" min="1" max="100" value="10" required>
+                    <span class="error-msg"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-full">Request account</button>
+            </form>
+            <div id="success-state" class="hidden">
+                <div class="success-icon">✓</div>
+                <h3>Request received</h3>
+                <p>We're preparing your workspace. Check your inbox within 24 hours.</p>
+            </div>
+        </div>
+    </div>
 
-.nav-links {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-    }
-    .nav-links a {
-        text-decoration: none;
-        color: var(--text-muted);
-        font-weight: 500;
-        transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--primary); }
-}
-
-/* Hero */
-.hero {
-    padding: 4rem 0;
-    background: linear-gradient(to bottom, #f0f7ff, #ffffff);
-}
-
-.hero-grid {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: #0f172a;
-}
-
-.subheadline {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.mock-ui {
-    width: 100%;
-    filter: drop-shadow(0 20px 25px -5px rgba(0, 0, 0, 0.1));
-}
-
-@media (min-width: 992px) {
-    .hero { padding: 8rem 0; }
-    .hero-grid { grid-template-columns: 1.2fr 1fr; }
-    .hero-content h1 { font-size: 3.5rem; }
-}
-
-/* Trust Bar */
-.trust-bar {
-    padding: 2rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    background: var(--bg-light);
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.trust-item svg { color: var(--primary); }
-
-@media (min-width: 768px) {
-    .trust-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-/* Problem Solution */
-.problem-solution {
-    padding: 5rem 1.5rem;
-    display: grid;
-    gap: 2rem;
-}
-
-.ps-box {
-    padding: 2rem;
-    border-radius: 12px;
-}
-
-.ps-box:first-child { background: #fee2e2; color: #991b1b; }
-.ps-box:last-child { background: #dcfce7; color: #166534; }
-
-@media (min-width: 768px) {
-    .problem-solution { grid-template-columns: 1fr 1fr; }
-}
-
-/* Features */
-.features { padding: 5rem 1.5rem; }
-.section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
-
-.features-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.card {
-    padding: 2rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--white);
-    transition: transform 0.2s;
-}
-
-.card h4 { color: var(--primary); }
-.card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0; }
-
-/* Security Section */
-.security {
-    background: #0f172a;
-    color: var(--white);
-    padding: 5rem 0;
-}
-
-.security-flex {
-    display: grid;
-    gap: 3rem;
-}
-
-.security-text h2 { color: var(--white); }
-.security-list { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
-.security-list h3 { color: var(--white); font-size: 1.2rem; }
-.security-list ul { list-style: none; }
-.security-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; font-size: 0.95rem; }
-.security-list li::before { content: "✓"; position: absolute; left: 0; color: #4ade80; }
-
-@media (min-width: 992px) {
-    .security-flex { grid-template-columns: 1fr 1fr; align-items: center; }
-}
-
-/* How It Works */
-.how-it-works { padding: 5rem 1.5rem; }
-.steps-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.step-card { text-align: center; }
-.step-num {
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-weight: bold;
-}
-
-/* Pricing */
-.pricing { padding: 5rem 1.5rem; }
-.pricing-card {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 3rem 2rem;
-    border: 2px solid var(--primary);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.2);
-}
-
-.price-hero { margin: 2rem 0; }
-.amount { font-size: 4rem; font-weight: 800; }
-.currency { font-size: 2rem; vertical-align: super; }
-.period { display: block; color: var(--text-muted); }
-
-.calculator { margin: 2rem 0; padding: 1.5rem; background: var(--bg-light); border-radius: 8px; }
-.calculator label { display: block; margin-bottom: 1rem; font-weight: 600; }
-
-input[type=range] { width: 100%; margin: 1rem 0; }
-.total-display { font-size: 1.25rem; margin-top: 1rem; }
-.total-display strong { color: var(--primary); font-size: 1.5rem; }
-.pricing-note { margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); }
-
-/* FAQ */
-.faq { padding: 5rem 1.5rem; max-width: 800px; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-question {
-    width: 100%;
-    padding: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: left;
-    cursor: pointer;
-    color: var(--text-main);
-}
-
-.faq-answer { padding-bottom: 1.5rem; color: var(--text-muted); }
-.faq-question .icon::after { content: "+"; font-size: 1.5rem; color: var(--primary); }
-.faq-question[aria-expanded="true"] .icon::after { content: "−"; }
-
-/* Final CTA */
-.final-cta {
-    padding: 5rem 1.5rem;
-    text-align: center;
-    background: var(--bg-light);
-}
-
-.btn-large { padding: 1rem 2.5rem; font-size: 1.25rem; }
-
-/* Footer */
-.site-footer { padding: 3rem 1.5rem; border-top: 1px solid var(--border); }
-.footer-grid { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-.footer-brand { font-weight: 800; font-size: 1.2rem; }
-.footer-nav { display: flex; gap: 1.5rem; }
-.footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
-.copyright { text-align: center; font-size: 0.8rem; color: var(--text-muted); }
-
-/* Proof */
-.proof-list {
-    list-style: none;
-    max-width: 600px;
-    margin: 0 auto;
-}
-.proof-list li {
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    background: #f1f5f9;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-}
-.proof-list li::before { content: "→"; margin-right: 1rem; color: var(--primary); font-weight: bold; }
-
-/* Modal */
-.modal {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 1000;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.modal.active { visibility: visible; opacity: 1; }
-.modal-overlay { position: absolute; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.8); }
-.modal-content {
-    position: relative;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 450px;
-    transform: translateY(20px);
-    transition: transform 0.3s;
-}
-.modal.active .modal-content { transform: translateY(0); }
-.modal-close { position: absolute; top: 1rem; right: 1rem; font-size: 2rem; border: none; background: none; cursor: pointer; }
-
-.form-group { margin-bottom: 1.25rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; }
-.form-group input { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
-.error-msg { color: #dc2626; font-size: 0.8rem; margin-top: 0.25rem; display: block; }
-.hidden { display: none; }
-
-#success-state { text-align: center; padding: 2rem 0; }
-.success-icon { width: 60px; height: 60px; background: #dcfce7; color: #166534; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; }
-
-/* Accessibility & Prefers Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-}
-
-:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+    <script src="script.js"></script>
+</body>
+</html>
