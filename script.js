@@ -11,7 +11,7 @@
     const userSlider = document.getElementById('user-slider');
     const userCount = document.getElementById('user-count');
     const totalPrice = document.getElementById('total-price');
-    const PRICE_PER_USER = 12;
+    const PRICE_PER_USER = 1; // £1 per user per month
 
     if (userSlider && userCount && totalPrice) {
         function updatePricing() {
@@ -177,7 +177,7 @@
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'conversion', {
                             'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-                            'value': formData.teamSize * 12,
+                            'value': formData.teamSize * 1,
                             'currency': 'GBP'
                         });
                     }
