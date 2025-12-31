@@ -28,6 +28,8 @@
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="dns-prefetch" href="https://holiday-portal.vercel.app">
     
     <link rel="stylesheet" href="styles.css">
@@ -87,24 +89,51 @@
 
     <main>
         <section class="hero">
+            <div class="hero-background">
+                <div class="hero-gradient-orb hero-gradient-orb-1"></div>
+                <div class="hero-gradient-orb hero-gradient-orb-2"></div>
+            </div>
             <div class="container hero-grid">
                 <div class="hero-content reveal">
                     <div class="badge-container">
-                        <span class="badge">New: Outlook Sync</span>
+                        <span class="badge badge-pulse">
+                            <span class="badge-dot"></span>
+                            New: Outlook Sync Available
+                        </span>
                     </div>
-                    <h1>Stop managing leave in spreadsheets</h1>
-                    <p class="subheadline">The only leave management tool that feels like a breath of fresh air. No training, no complexity—just a calm, clear dashboard.</p>
-                    <div class="hero-actions">
-                        <button class="btn btn-primary btn-lg cta-trigger">Request account</button>
-                        <a href="#pricing" class="btn btn-secondary btn-lg">See pricing</a>
-                    </div>
-                    <p class="hero-trust-note">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-                        No credit card required. Setup takes 2 minutes.
+                    <h1 class="hero-headline">
+                        Leave management that <span class="gradient-text">actually works</span>
+                    </h1>
+                    <p class="subheadline">
+                        Stop wrestling with spreadsheets. Holiday is the only leave management tool designed for humans—beautiful, simple, and powerful. Get your team set up in minutes, not months.
                     </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg cta-trigger hero-cta-primary">
+                            <span>Get started free</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="#how-it-works" class="btn btn-secondary btn-lg hero-cta-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                            <span>Watch demo</span>
+                        </a>
+                    </div>
+                    <div class="hero-trust-bar">
+                        <div class="hero-trust-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>No credit card</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>2-minute setup</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>Bank-grade security</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-visual reveal">
-                    <div class="mock-browser">
+                    <div class="mock-browser glass-effect">
                         <div class="mock-header">
                             <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
                             <div class="bar">holiday-app.com/dashboard</div>
@@ -114,17 +143,17 @@
                             <div class="ui-content">
                                 <div class="ui-row-1"></div>
                                 <div class="ui-card-grid">
-                                    <div class="ui-card"></div>
-                                    <div class="ui-card"></div>
-                                    <div class="ui-card"></div>
+                                    <div class="ui-card ui-card-animated"></div>
+                                    <div class="ui-card ui-card-animated"></div>
+                                    <div class="ui-card ui-card-animated"></div>
                                 </div>
                                 <div class="ui-list">
-                                    <div class="ui-list-item">
+                                    <div class="ui-list-item ui-list-item-animated">
                                         <div class="ui-avatar"></div>
                                         <div class="ui-lines"><span></span><span></span></div>
                                         <div class="ui-badge"></div>
                                     </div>
-                                    <div class="ui-list-item">
+                                    <div class="ui-list-item ui-list-item-animated">
                                         <div class="ui-avatar"></div>
                                         <div class="ui-lines"><span></span><span></span></div>
                                         <div class="ui-badge"></div>
@@ -158,39 +187,177 @@
             </div>
         </section>
 
-        <section id="features" class="features container">
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Everything you need, nothing you don't</h2>
-                <p>Powerful enough for HR. Simple enough for humans.</p>
+                    <span class="section-badge">Simple Process</span>
+                    <h2 class="section-title">Get started in three steps</h2>
+                    <p>No training required. No complex setup. Just three simple steps to transform how you manage leave.</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-item reveal">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Request your account</h3>
+                            <p>Fill out a quick form with your company details. No credit card required—we'll set you up immediately.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-item reveal">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Import your team</h3>
+                            <p>We'll help you migrate from spreadsheets or other systems. Free migration support included.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-item reveal">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Start managing leave</h3>
+                            <p>Your team can start requesting leave immediately. Approvals, balances, and calendar sync—all working from day one.</p>
+                        </div>
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="card reveal">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                    </div>
-                    <h4>Total Flexibility</h4>
-                    <p>Support for full days, half days, and specific morning/afternoon blocks.</p>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Powerful Features</span>
+                    <h2 class="section-title">Everything you need, nothing you don't</h2>
+                    <p>Powerful enough for HR teams. Simple enough for everyone.</p>
                 </div>
-                <div class="card reveal">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                
+                <!-- Feature Focus Section 1 -->
+                <div class="feature-focus feature-focus-left reveal">
+                    <div class="feature-focus-content">
+                        <div class="feature-focus-badge">Flexible Leave Types</div>
+                        <h3>Total flexibility for your team</h3>
+                        <p>Support for full days, half days, and specific morning/afternoon blocks. Handle any leave scenario your team needs—no workarounds required.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Full day requests
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Half day options
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Morning/afternoon blocks
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Custom leave types
+                            </li>
+                        </ul>
                     </div>
-                    <h4>Team Approvals</h4>
-                    <p>Assign multiple managers to a group. Anyone can approve to keep things moving.</p>
+                    <div class="feature-focus-visual">
+                        <div class="feature-visual-card glass-effect">
+                            <div class="feature-visual-header"></div>
+                            <div class="feature-visual-content">
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card reveal">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/></svg>
+
+                <!-- Feature Focus Section 2 -->
+                <div class="feature-focus feature-focus-right reveal">
+                    <div class="feature-focus-visual">
+                        <div class="feature-visual-card glass-effect">
+                            <div class="feature-visual-header"></div>
+                            <div class="feature-visual-content">
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Smart Cancellations</h4>
-                    <p>Plans change. One click for you to approve a cancellation and restore their balance.</p>
+                    <div class="feature-focus-content">
+                        <div class="feature-focus-badge">Smart Approvals</div>
+                        <h3>Team approvals that keep things moving</h3>
+                        <p>Assign multiple managers to a group. Anyone can approve to keep things moving. No bottlenecks, no delays—just smooth approvals.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Multi-manager approval
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                One-click approvals
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Smart notifications
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Manager self-service
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- Feature Focus Section 3 -->
+                <div class="feature-focus feature-focus-left reveal">
+                    <div class="feature-focus-content">
+                        <div class="feature-focus-badge">Real-Time Updates</div>
+                        <h3>Live balances and instant updates</h3>
+                        <p>Employees see their remaining allowance update in real-time before submitting. No surprises, no confusion—just clarity.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Real-time balance updates
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Smart cancellation handling
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Automatic balance restoration
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                                Company-wide dashboard
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-focus-visual">
+                        <div class="feature-visual-card glass-effect">
+                            <div class="feature-visual-header"></div>
+                            <div class="feature-visual-content">
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                                <div class="feature-visual-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="features-grid">
                 <div class="card reveal">
                     <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h4>Live Balances</h4>
-                    <p>Employees see their remaining allowance update in real-time before submitting.</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <h4>Calendar Sync</h4>
+                        <p>Push approved leave to Outlook or Google Calendar via a secure, private feed.</p>
                 </div>
                 <div class="card reveal">
                     <div class="card-icon">
@@ -201,10 +368,11 @@
                 </div>
                 <div class="card reveal">
                     <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4>Bank Holidays</h4>
+                        <p>Automatic UK Bank Holiday detection and handling. Configure by region.</p>
                     </div>
-                    <h4>Calendar Sync</h4>
-                    <p>Push approved leave to Outlook or Google Calendar via a secure, private feed.</p>
                 </div>
             </div>
         </section>
@@ -319,46 +487,85 @@
             </div>
         </section>
 
-        <section class="testimonials container">
-            <div class="section-header">
-                <h2 class="section-title">Trusted by UK teams</h2>
-                <p>See what teams are saying about Holiday</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <p>"Finally, a leave management system that doesn't feel like work. Our team adopted it in minutes, not weeks."</p>
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Social Proof</span>
+                    <h2 class="section-title">Trusted by forward-thinking UK teams</h2>
+                    <p>Join hundreds of companies who've made the switch from spreadsheets to Holiday</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal glass-effect">
+                        <div class="testimonial-rating">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Finally, a leave management system that doesn't feel like work. Our team adopted it in minutes, not weeks. The calendar sync alone saves us hours every week."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar"></div>
+                            <div>
+                                <div class="testimonial-name">Sarah Mitchell</div>
+                                <div class="testimonial-role">HR Director, TechStart Ltd</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
-                        <div>
-                            <div class="testimonial-name">Sarah Mitchell</div>
-                            <div class="testimonial-role">HR Director, TechStart Ltd</div>
+                    <div class="testimonial-card reveal glass-effect">
+                        <div class="testimonial-rating">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The pricing is transparent, the interface is clean, and it just works. Exactly what we needed. No training required—our team was productive from day one."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar"></div>
+                            <div>
+                                <div class="testimonial-name">James Chen</div>
+                                <div class="testimonial-role">Operations Manager, DesignCo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal glass-effect">
+                        <div class="testimonial-rating">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"We moved from spreadsheets to Holiday in one afternoon. The migration was seamless, and the calendar sync alone saves us hours every week. Best decision we made this year."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar"></div>
+                            <div>
+                                <div class="testimonial-name">Emma Thompson</div>
+                                <div class="testimonial-role">Founder, Growth Agency</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <p>"The pricing is transparent, the interface is clean, and it just works. Exactly what we needed."</p>
+                <div class="trust-stats">
+                    <div class="trust-stat reveal">
+                        <div class="trust-stat-number">500+</div>
+                        <div class="trust-stat-label">UK Companies</div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
-                        <div>
-                            <div class="testimonial-name">James Chen</div>
-                            <div class="testimonial-role">Operations Manager, DesignCo</div>
-                        </div>
+                    <div class="trust-stat reveal">
+                        <div class="trust-stat-number">4.9/5</div>
+                        <div class="trust-stat-label">Average Rating</div>
                     </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <p>"We moved from spreadsheets to Holiday in one afternoon. The calendar sync alone saves us hours every week."</p>
+                    <div class="trust-stat reveal">
+                        <div class="trust-stat-number">99.9%</div>
+                        <div class="trust-stat-label">Uptime SLA</div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"></div>
-                        <div>
-                            <div class="testimonial-name">Emma Thompson</div>
-                            <div class="testimonial-role">Founder, Growth Agency</div>
-                        </div>
                     </div>
                 </div>
             </div>
